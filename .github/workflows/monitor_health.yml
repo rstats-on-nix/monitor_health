@@ -21,11 +21,7 @@ jobs:
     - uses: DeterminateSystems/nix-installer-action@main
     - uses: DeterminateSystems/magic-nix-cache-action@main
 
-    - name: Access Payload Data
-      run: |
-          echo "Branch: ${{ github.event.client_payload.ref_name }}"
-
-    - name: Build on date ${{ github.event.client_payload.ref_name }}
+    - name: Check tree health
       run:   |
          if [ "$RUNNER_OS" == "Linux" ]; then
               nix-build --max-jobs 1 --cores 2 --argstr system x86_64-linux health.nix
