@@ -13,9 +13,7 @@ for_nix <- paste0(
   collapse = " "
 )
 
-health_nix <- readLines(
-  "health.nix"
-)
+health_nix <- readLines("health.nix")
 
 health_nix <- gsub("PACKAGES_HERE", for_nix, health_nix)
 
