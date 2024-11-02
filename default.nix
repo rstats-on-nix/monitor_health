@@ -24,11 +24,6 @@ let
       R;
   };
 
-  r_packages = builtins.attrValues {
-    inherit (pkgs.rPackages) 
-      dplyr;
-  };
-  
 in
 
 pkgs.mkShell {
@@ -40,6 +35,6 @@ pkgs.mkShell {
    LC_PAPER = "en_US.UTF-8";
    LC_MEASUREMENT = "en_US.UTF-8";
 
-  buildInputs = [ git_archive_pkgs   system_packages ];
+  buildInputs = [ git_archive_pkgs system_packages ];
   
 }

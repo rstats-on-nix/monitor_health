@@ -5,32 +5,7 @@ let
 };
  r_packages = builtins.attrValues {
   inherit (pkgs.rPackages)
-    tidyverse
-    arrow
-    duckdb
-    collapse
-    kit
-    icosa
-    sf
-    terra
-    stars
-    Rcpp
-    data_table
-    stringi
-    jsonlite
-    devtools
-    ragg
-    curl
-    openssl
-    shiny
-    dbplyr
-    RcppEigen
-    nloptr
-    igraph
-    rJava
-    RCurl
-    RSQLite
-    rstan
+    rlang lifecycle ggplot2 dplyr cli vctrs glue tibble pillar jsonlite magrittr withr R6 fansi utf8 scales pkgconfig Rcpp xfun stringr tidyselect tidyverse htmltools purrr tidyr curl cpp11 knitr munsell RColorBrewer readxl colorspace generics viridisLite gtable sass labeling isoband rmarkdown digest jquerylib farver fastmap bslib fs evaluate crayon mime ragg cachem tinytex fontawesome stringi memoise data_table yaml rappdirs httr readr hms highr textshaping base64enc prettyunits openssl xml2 progress askpass sys lubridate processx tzdb callr ps bit64 rstudioapi bit vroom broom systemfonts clipr rematch2 haven rematch timechange cellranger modelr zoo forcats rvest htmlwidgets dbplyr DBI rprojroot backports gargle blob selectr promises later
     ;
 };
  wrapped_pkgs = pkgs.rWrapper.override {
