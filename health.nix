@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/rstats-on-nix/nixpkgs/archive/refs/heads/master.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/refs/heads/master.tar.gz") {};
  system_packages = builtins.attrValues {
   inherit (pkgs) R glibcLocales nix;
 };
