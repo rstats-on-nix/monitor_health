@@ -5,7 +5,18 @@ let
 };
  r_packages = builtins.attrValues {
   inherit (pkgs.rPackages)
-    rlang lifecycle ggplot2 dplyr cli vctrs glue tibble pillar jsonlite magrittr withr R6 fansi utf8 scales pkgconfig Rcpp xfun stringr tidyselect tidyverse htmltools purrr tidyr curl cpp11 knitr munsell RColorBrewer readxl colorspace generics viridisLite gtable sass labeling isoband rmarkdown digest jquerylib farver fastmap bslib fs evaluate crayon mime ragg cachem tinytex fontawesome stringi memoise data_table yaml rappdirs httr readr hms highr textshaping base64enc prettyunits openssl xml2 progress askpass sys lubridate processx tzdb callr ps bit64 rstudioapi bit vroom broom systemfonts clipr rematch2 haven rematch timechange cellranger modelr zoo forcats rvest htmlwidgets dbplyr DBI rprojroot backports gargle blob selectr promises later
+    callr ps bit64 rstudioapi bit vroom broom systemfonts clipr rematch2
+    ggplot2 arrow duckdb collapse kit icosa sf terra stars devtools openssl
+    haven rematch knitr munsell RColorBrewer readxl colorspace generics tzdb
+    later dplyr cli fs evaluate crayon mime ragg cachem tinytex fontawesome
+    lubridate processx data_table yaml rappdirs httr readr hms highr textshaping
+    memoise RcppEigen nloptr igraph rJava RCurl RSQLite rstan rlang lifecycle
+    shiny dbplyr base64enc prettyunits openssl xml2 progress askpass sys
+    tidyr curl cpp11 dbplyr DBI rprojroot backports gargle blob selectr promises
+    tidyverse Rcpp xfun stringr tidyselect tidyverse htmltools purrr stringi
+    timechange cellranger modelr zoo forcats rvest htmlwidgets scales pkgconfig
+    vctrs glue tibble pillar jsonlite magrittr withr R6 fansi utf8 fastmap bslib
+    viridisLite gtable sass labeling isoband rmarkdown digest jquerylib farver
     ;
 };
  wrapped_pkgs = pkgs.rWrapper.override {
