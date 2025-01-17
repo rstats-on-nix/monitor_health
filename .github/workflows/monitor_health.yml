@@ -15,20 +15,15 @@ jobs:
       contents: "read"
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-14]
+        os: [ubuntu-latest, macos-14, ubuntu-24.04-arm]
     steps:
     - uses: actions/checkout@v4
     - uses: DeterminateSystems/nix-installer-action@main
     - uses: DeterminateSystems/magic-nix-cache-action@main
 
     - name: Check tree health
-      run:   |
-         if [ "$RUNNER_OS" == "Linux" ]; then
-              nix-build --max-jobs 1 --cores 2 --argstr system x86_64-linux health.nix
-              nix-build --max-jobs 1 --cores 2 --argstr system aarch64-linux health.nix
-         else
-              nix-build --max-jobs 1 --cores 2 health.nix
-         fi
+      run: nix-build --max-jobs 1 --cores 2 health.nix
+
         
     #- name: Test tidyverse
     #  run: nix-shell health.nix --run "Rscript -e 'withr::with_package(\"tidyverse\", glimpse(mtcars))'"
