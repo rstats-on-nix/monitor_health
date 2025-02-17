@@ -7,7 +7,7 @@ system_packages = builtins.attrValues {
  r_packages = builtins.attrValues {
   inherit (pkgs.rPackages)
     callr ps bit64 rstudioapi bit vroom broom systemfonts clipr rematch2
-    ggplot2 arrow duckdb collapse kit icosa sf terra stars devtools openssl
+    ggplot2 arrow duckdb collapse kit icosa sf terra stars devtools openssl unigd
     haven rematch knitr munsell RColorBrewer readxl colorspace generics tzdb
     later dplyr cli fs evaluate crayon mime ragg cachem tinytex fontawesome
     lubridate processx data_table yaml rappdirs httr readr hms highr textshaping
